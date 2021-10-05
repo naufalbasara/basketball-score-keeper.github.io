@@ -1,1 +1,1 @@
-# basketball-score-keeper.github.io
+# Basketball Score keeper

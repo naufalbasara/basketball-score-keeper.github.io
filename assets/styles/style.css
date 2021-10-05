@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    top: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: whitesmoke;
+}
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px black;
+    overflow: hidden;
+}
+
+/* jumbotron */
+.card .jumbotron {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.card .jumbotron .img {
+    height: 250px;
+    width: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* scoreboard */
+.card .scoreboard {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card .scoreboard h1 {
+    margin: 5px 0;
+    font-size: 50px;
+}
+.card .scoreboard label {
+    margin-top: 20px;
+}
+.card .scoreboard select {
+    padding: 15px;
+}
+
+
+/* buttons */
+
+.card .buttons {
+    display: flex;
+    flex-grow: 1;
+}
+.card .buttons button {
+    flex-grow: 1;
+    border-radius: 10px;
+}
+.card .buttons .row {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+.card .buttons .play {
+    flex-grow: 1;
+}
+.card .buttons .row button.a {
+    background-color: cyan; 
+}
+.card .buttons button {
+    background-color: rgb(32, 248, 78);
+}
+.card .buttons .row button.b {
+    background-color: #e83544;
+}
+
+
+/* animations */
+main .animation img{
+    position:absolute;
+    width: 48px;
+    height: 48px;
+    top: 92%;
+    right: 10px;
+    transition: 1s;
+}
+
+.start {
+    animation: bounce 0.5s ease infinite alternate forwards;
+}
+@keyframes bounce {
+    0% {
+        top: 92%;
+    }
+    100% {
+        top: 80vh;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 650px) {
+    main .animation img{
+        position:absolute;
+        width: 48px;
+        height: 48px;
+        top: 52%;
+        right: 10px;
+        transform: 1s;
+    }
+    .start {
+        animation: rotate 1s ease infinite forwards;
+    }
+}
